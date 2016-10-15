@@ -1,14 +1,16 @@
-package pattern.template;
+package pattern.template.set2;
 
-public abstract class CaffeineBeverage {
-	
-	final void prepareRecipe(){
+public abstract class CaffeineBeverageWithHook {
+
+	void prepareRecipe(){
 		boilWater();
 		brew();
 		pourInCup();
-		addCondiments();
+		if(customerWantsCondiments()){
+			addCondiments();
+		}
 	}
-
+	
 	void boilWater(){
 		System.out.println("Boiling Water!");
 	}
@@ -20,4 +22,8 @@ public abstract class CaffeineBeverage {
 	}
 	
 	abstract void addCondiments();
+	
+	boolean customerWantsCondiments(){
+		return true;
+	}
 }

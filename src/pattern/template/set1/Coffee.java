@@ -1,4 +1,5 @@
-package pattern.template;
+package pattern.template.set1;
+
 
 public class Coffee extends CaffeineBeverage {
 
